@@ -13,7 +13,7 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image
-        run: docker build -tchicagohub/florida:latest .
+        run: docker build -t chicagohub/florida:latest .
       - name: Publish image to Docker Hub
         run: docker push chicagohub/florida:latest
 
